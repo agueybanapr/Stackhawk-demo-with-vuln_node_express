@@ -5,7 +5,7 @@ All code in this repository is for testing purposes only.
 
 ## I am currently using it to test [Stackhawk](https://stackhawk.com) DAST CI/CD & Github Actions solutions as a POC to hopefully add it to our security tools stack.
 
-```DELETE ME```
+```DELETE-ME```
 ## Build and Run
 
 ### Install NPM Dependencies
