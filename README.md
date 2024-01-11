@@ -21,7 +21,7 @@ node bootstrapdb.js
 ```shell script
 DEBUG=myapp:* npm start
 ```
-
+## 
 ## Build and Run with Docker
 
 ### Build Docker Image
