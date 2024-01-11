@@ -6,12 +6,14 @@ app:
   env: Development # (required)
   # -- The url of your application to scan --
   host: http://localhost:3000 # (required)
+ 
   # Reuse the ENV vars we just populated from GitHub workflow variables
   tags:
     - name: _STACKHAWK_GIT_COMMIT_SHA
       value: ${COMMIT_SHA}
     - name: _STACKHAWK_GIT_BRANCH
       value: ${BRANCH_NAME}
+
 # -- To make the HawkScan break your build for high severity alerts -- 
 #hawk:
 #  failureThreshold: High
