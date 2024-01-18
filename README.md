@@ -1,9 +1,20 @@
+# Web Application Security Testing with StackHawk DAST
+
+## Overview
+
+This repository serves as a Proof of Concept (POC) for integrating StackHawk's Dynamic Application Security Testing (DAST) solution into our Continuous Integration/Continuous Deployment (CI/CD) pipeline using GitHub Actions.   
+
+## Purpose
+
+The main objectives of this POC are:
+- Evaluate StackHawk DAST for vulnerability detection in our web applications.
+- Test the integration of StackHawk DAST with our CI/CD pipeline.
+- Assess the feasibility of adding StackHawk to our company's security tools stack.
+
 # Vulnerable Node Express
 
 This is a vulnerable Node Express service meant to be used as a target for security testing tools.
 All code in this repository is for testing purposes only.
-
-## I am currently using it to test [Stackhawk](https://stackhawk.com) DAST CI/CD & Github Actions solutions as a POC to hopefully add it to our security tools stack.
 
 ## Build and Run
 
