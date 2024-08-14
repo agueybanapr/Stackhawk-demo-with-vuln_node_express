@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Install Node.js 18.x
+      - name: Install Node.js 14.x
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 14
           cache: npm
       - name: Install dependencies
         run: npm install
@@ -27,6 +27,6 @@ jobs:
       - name: Daemonize our Node API service
         run: npm run start &
       - name: Run HawkScan
-        uses: stackhawk/hawkscan-action@v2.0.0
+        uses: stackhawk/hawkscan-action@v2.2.0
         with:
           apiKey: ${{ secrets.HAWK_API_KEY }}
