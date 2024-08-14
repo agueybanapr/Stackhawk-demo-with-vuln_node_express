@@ -10,23 +10,28 @@ jobs:
     name: Build and test
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Install Node.js 20
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
+       - name: New Java Compatibility
+         uses: actions/setup-java@v4
+         with:
+           distribution: 'temurin'
+           java-version: '17'
+       - name: Checkout code
+         uses: actions/checkout@v3
+       - name: Install Node.js 18.x
+         uses: actions/setup-node@v3
+         with:
+          node-version: 18
           cache: npm
-      - name: Install dependencies
-        run: npm install
-      - name: Run unit tests
-        run: npm test
+       - name: Install dependencies
+         run: npm install
+       - name: Run unit tests
+         run: npm test
 
           ### NEW STEPS BELOW! ###
         
-      - name: Daemonize our Node API service
-        run: npm run start &
-      - name: Run HawkScan
-        uses: stackhawk/hawkscan-action@v2.2.0
-        with:
+       - name: Daemonize our Node API service
+         run: npm run start &
+       - name: Run HawkScan
+         uses: stackhawk/hawkscan-action@v2.2.0
+         with:
           apiKey: ${{ secrets.HAWK_API_KEY }}
